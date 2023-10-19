@@ -396,6 +396,12 @@ syscall_t syscall_table[] = {
     //[382]  = (syscall_t) sys_pkey_free,
     [383] = (syscall_t) syscall_silent_stub, // statx
     [384] = (syscall_t) sys_arch_prctl,
+    //[385] UNIMPLEMENTED
+    //[387 ... 402] UNIMPLEMENTED
+    //[415] UNIMPLEMENTED
+    //[424] UNIMPLEMENTED
+    //[427 ... 433] UNIMPLEMENTED
+    //[437 ... 438] UNIMPLEMENTED
     //to be continued
     [439] = (syscall_t) syscall_silent_stub, // faccessat2
 };
