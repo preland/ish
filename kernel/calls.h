@@ -254,6 +254,11 @@ dword_t sys_getrandom(addr_t buf_addr, dword_t len, dword_t flags);
 int_t sys_syslog(int_t type, addr_t buf_addr, int_t len);
 int_t sys_ipc(uint_t call, int_t first, int_t second, int_t third, addr_t ptr, int_t fifth);
 
+//unimplemented
+//NOTE: parameter and return types are sourced directly from their respective man pages; they may not be appropriate for our use case and are only used for simplicity and legibility.
+//int_t sys_creat(char_t *pathname, int_t mode)
+//int_t sys_lchown(const char_t *pathname, uid_t owner, gid_t group);
+
 typedef int (*syscall_t)(dword_t, dword_t, dword_t, dword_t, dword_t, dword_t);
 
 #endif
