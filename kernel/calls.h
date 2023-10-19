@@ -255,9 +255,58 @@ int_t sys_syslog(int_t type, addr_t buf_addr, int_t len);
 int_t sys_ipc(uint_t call, int_t first, int_t second, int_t third, addr_t ptr, int_t fifth);
 
 //unimplemented
-//NOTE: parameter and return types are sourced directly from their respective man pages; they may not be appropriate for our use case and are only used for simplicity and legibility.
-//int_t sys_creat(char_t *pathname, int_t mode)
-//int_t sys_lchown(const char_t *pathname, uid_t owner, gid_t group);
+//NOTE: parameter and return types are sourced directly from the respective syscall's man page; they may not be appropriate for our use case and are only used for simplicity and legibility.
+//also, any syscall starting with "old" will be ignored for now
+
+//int sys_creat(char *pathname, mode_t mode);
+//int sys_lchown(const char *pathname, uid owner, gid_t group);
+//int sys_umount(const char *target);
+//int nice(int inc);
+//sighandler_t signal(int signum, sighandler_t handler);
+//int acct(const char *_Nullable filename);
+//int ustat(dev_t dev, struct ustat *ubuf);
+//int sigaction(int signum, const struct sigaction *_Nullable restrict act, struct sigaction *_Nullable restrict oldact);
+//int setreuid(uid_t ruid, uid_t euid);
+//int setregid(gid_t rgid, gid_t egid);
+//int sigsuspend(const sigset_t *mask);
+//int sigpending(sigset_t *set);
+//int select(int nfds, fd_set *_Nullable restrict readfds, fd_set *_Nullable restrict writefds, fd_set *_Nullable restrict exceptfds, struct timeval *_Nullable restrict timeout);
+//[[deprecated]] int uselib(const char *library);
+//int swapon(const char *path, int swapflags);
+//int truncate(const char *path, off_t length);
+//int ftruncate(int fd, off_t length);
+//int fchown(int fd, uid_t owner, gid_t group);
+//int ioperm(unsigned long from, unsigned long num, int turn_on);
+//int getitimer(int which, struct itimerval *curr_value);
+//int stat(const char *restrict pathname, struct stat *restrict statbuf);
+//int lstat(const char *restrict pathname, struct stat *restrict statbuf);
+//int fstat(int fd, struct stat *statbuf);
+//[[deprecated]] int iopl(int level);
+//int vhangup(void);
+//[[deprecated]] int idle(void);
+//int swapoff(const char *path);
+//int setdomainname(const char *name, size_t len);
+//tbh idk what to do for modify_ltd lol;
+//int adjtimex(struct timex *buf);
+//int sigprocmask(int how, const sigset_t *_Nullable restrict set, sigset_t *_Nullable restrict oldset);
+//[[deprecated]] caddr_t create_module(const char *name, size_t size);
+//init_module; delete_module dont have glibc wrappers
+//[[deprecated]] int get_kernel_syms(struct kernel_sym *table);
+//int quotactl(int cmd, const char *_Nullable special, int id, caddr_t addr);
+//[[deprecated]] int bdflush(int func, long *address);
+//[[deprecated]] int setfsuid(uid_t fsuid);
+//[[deprecated]] int setfsgid(gid_t fsgid);
+//int munlock(const void addr[.len], size_t len);
+//int mlockall(int flags);
+//int munlockall(void);
+//int sched_setparam(pid_t pid, const struct sched_param *param);
+//int sched_get_priority_min(int policy);
+//int sched_rr_get_interval(pid_t pid, struct timespec *tp);
+//int setresuid(uid_t ruid, uid_t euid, uid_t suid);
+//int getresuid(uid_t *ruid, uid_t *euid, uid_t *suid);
+
+
+//int setresgid(gid_t rgid, gid_t egid, gid_t sgid);
 
 typedef int (*syscall_t)(dword_t, dword_t, dword_t, dword_t, dword_t, dword_t);
 
