@@ -397,12 +397,37 @@ syscall_t syscall_table[] = {
     [383] = (syscall_t) syscall_silent_stub, // statx
     [384] = (syscall_t) sys_arch_prctl,
     //[385] UNIMPLEMENTED
+    //[386]  = (syscall_t) sys_mlock2,
     //[387 ... 402] UNIMPLEMENTED
+    //[403]  = (syscall_t) sys_mlock2,
+    //[404]  = (syscall_t) sys_mlock2,
+    //[405]  = (syscall_t) sys_mlock2,
+    //[406]  = (syscall_t) sys_mlock2,
+    //[407]  = (syscall_t) sys_mlock2,
+    //[408]  = (syscall_t) sys_mlock2,
+    //[409]  = (syscall_t) sys_mlock2,
+    //[410]  = (syscall_t) sys_mlock2,
+    //[411]  = (syscall_t) sys_mlock2,
+    //[412]  = (syscall_t) sys_mlock2,
+    //[413]  = (syscall_t) sys_mlock2,
+    //[414]  = (syscall_t) sys_mlock2,
     //[415] UNIMPLEMENTED
+    //[416]  = (syscall_t) sys_mlock2,
+    //[417]  = (syscall_t) sys_mlock2,
+    //[418]  = (syscall_t) sys_mlock2,
+    //[419]  = (syscall_t) sys_mlock2,
+    //[420]  = (syscall_t) sys_mlock2,
+    //[421]  = (syscall_t) sys_mlock2,
+    //[422]  = (syscall_t) sys_mlock2,
+    //[423]  = (syscall_t) sys_mlock2,
     //[424] UNIMPLEMENTED
+    //[425]  = (syscall_t) sys_mlock2,
+    //[426]  = (syscall_t) sys_mlock2,
     //[427 ... 433] UNIMPLEMENTED
+    //[434]  = (syscall_t) sys_mlock2,
+    //[435]  = (syscall_t) sys_mlock2,
+    //[436]  = (syscall_t) sys_mlock2,
     //[437 ... 438] UNIMPLEMENTED
-    //to be continued
     [439] = (syscall_t) syscall_silent_stub, // faccessat2
 };
 
