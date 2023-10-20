@@ -187,7 +187,7 @@ uid_t_ sys_getgid32(void);
 uid_t_ sys_getgid(void);
 uid_t_ sys_getegid32(void);
 uid_t_ sys_getegid(void);
-dword_t sys_setresuid(uid_t_ ruid, uid_t_ euid, uid_t_ suid);
+dword_tsys_setresuid(uid_t_ ruid, uid_t_ euid, uid_t_ suid);
 dword_t sys_setresgid(uid_t_ rgid, uid_t_ egid, uid_t_ sgid);
 int_t sys_setreuid(uid_t_ ruid, uid_t_ euid);
 int_t sys_setregid(uid_t_ rgid, uid_t_ egid);
@@ -304,10 +304,17 @@ int_t sys_ipc(uint_t call, int_t first, int_t second, int_t third, addr_t ptr, i
 //int sched_rr_get_interval(pid_t pid, struct timespec *tp);
 //int setresuid(uid_t ruid, uid_t euid, uid_t suid);
 //int getresuid(uid_t *ruid, uid_t *euid, uid_t *suid);
-
-
+//int vm86(unsigned long fn, struct vm86plus_struct *v86);
+//[[deprecated]] int query_module(const char *name, int which, void buf[.bufsize], size_t bufsize, size_t *ret);
+//long nfsserctl(int cmd, struct nfsctl_arg *argp, union nfsctl_res *resp);
 //int setresgid(gid_t rgid, gid_t egid, gid_t sgid);
-
+//int getresgid(gid_t *rgid, gid_t *egid, git_t *sgid);
+//int rt_sigqueueinfo(pid_t tgid, pid_t tid, int sig, siginfo_t *info);
+//int chown(const char *pathname, uid_t owner, gid_t group);
+//  [[deprecated]] int setfsuid(uid_t fsuid);
+//  [[deprecated]] int setfsgid(gid_t fsgid);
+//  int set_thread_area(struct user_desc *u_info);
+//  int io_destroy(aio_context_t ctx_id);
 typedef int (*syscall_t)(dword_t, dword_t, dword_t, dword_t, dword_t, dword_t);
 
 #endif
